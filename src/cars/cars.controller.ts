@@ -32,6 +32,7 @@ export class CarsController {
   getCarsWithName(@Query() query): Promise<CarInterface[]> {
     return this.carService.getCarsWithName(query);
   }
+
   //FIND CAR FOR ID
   @Get('/findOneForId/:id')
   getOneCarforId(@Param('id') id: string): Promise<CarInterface> {
@@ -39,7 +40,6 @@ export class CarsController {
   }
 
   //DELETE CAR FOR ID
-
   @Delete('/deleteOneForId/:id')
   deleteOneCarforId(@Param('id') id: string): Promise<CarInterface> {
     return this.carService.deleteOneCarforId(id);
