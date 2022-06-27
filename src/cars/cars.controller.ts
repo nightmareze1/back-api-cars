@@ -13,8 +13,10 @@ import {
   HttpCode,
   HttpException,
   NotFoundException,
+  Body,
 } from '@nestjs/common';
 import { CarsService } from './cars.service';
+import { CreateCarDto } from './dto/cars.dto';
 import { CarInterface } from './interfaces/cars.interface';
 
 @Controller('cars')
@@ -43,5 +45,14 @@ export class CarsController {
   @Delete('/deleteOneForId/:id')
   deleteOneCarforId(@Param('id') id: string): Promise<CarInterface> {
     return this.carService.deleteOneCarforId(id);
+  }
+
+  //UPDATE CAR FOR ID
+  @Put('/updateOneForId/:id')
+  updateOneCarforId(
+    @Param('id') id: string,
+    @Body() createCatDto: CreateCarDto,
+  ): Promise<CarInterface> {
+    return this.carService.updateOneCarforId(id, createCatDto);
   }
 }
