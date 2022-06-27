@@ -16,29 +16,64 @@ export class CarsService {
   //FIND ALL CARS
   async getAllCars(query): Promise<CarInterface[]> {
     const { limit, offset } = query;
-    console.log(limit, 'limit', offset, 'offset');
 
-    return await this.carModel.find({}).limit(limit).skip(offset);
+    try {
+      return await this.carModel.find({}).limit(limit).skip(offset);
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: `Cars not found`,
+        },
+        HttpStatus.NOT_FOUND,
+      );
+    }
   }
 
   //FIND CAR FOR NAME
   async getCarsWithName(query): Promise<CarInterface[]> {
-    console.log(query);
     const { name, limit, offset } = query;
-    return await this.carModel.find({ name: name }).limit(limit).skip(offset);
+
+    try {
+      return await this.carModel.find({ name: name }).limit(limit).skip(offset);
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: `Cars not found`,
+        },
+        HttpStatus.NOT_FOUND,
+      );
+    }
   }
   //FIND CAR FOR ID
-  async getOneCarforId(id): Promise<CarInterface> {
+  async getOneCarforId(id: string): Promise<CarInterface> {
     try {
       const found = await this.carModel.findById(id);
       return found;
     } catch (error) {
       throw new HttpException(
         {
-          status: HttpStatus.FORBIDDEN,
-          error: `car with id ${id} does not exist`,
+          status: HttpStatus.BAD_REQUEST,
+          error: `Car with id ${id} does not exist`,
         },
         HttpStatus.FORBIDDEN,
+      );
+    }
+  }
+
+  //DELETE CAR FOR ID
+  async deleteOneCarforId(id: string): Promise<CarInterface> {
+    try {
+      const found = await this.carModel.findByIdAndRemove(id);
+      return found;
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: `Car with id ${id} does not exist`,
+        },
+        HttpStatus.NOT_FOUND,
       );
     }
   }
