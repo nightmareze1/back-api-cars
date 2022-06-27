@@ -18,7 +18,13 @@ export class CarsController {
   constructor(private readonly carService: CarsService) {}
 
   @Get()
-  getAllCars(): Promise<CarInterface[]> {
+  getAllCars(@Query() query): Promise<CarInterface[]> {
+    console.log(query, 'esta es mi query');
     return this.carService.getAllCars();
+  }
+
+  @Get()
+  getCarWithName(@Query() query): Promise<CarInterface[]> {
+    return this.carService.getCarWithName(query);
   }
 }
