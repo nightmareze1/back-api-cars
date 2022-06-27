@@ -51,8 +51,14 @@ export class CarsController {
   @Put('/updateOneForId/:id')
   updateOneCarforId(
     @Param('id') id: string,
-    @Body() createCatDto: CreateCarDto,
+    @Body() createCarDto: CreateCarDto,
   ): Promise<CarInterface> {
-    return this.carService.updateOneCarforId(id, createCatDto);
+    return this.carService.updateOneCarforId(id, createCarDto);
+  }
+
+  //CREATE CAR
+  @Post('/createCar')
+  createCar(@Body() createCarDto: CreateCarDto): Promise<CarInterface> {
+    return this.carService.createCar(createCarDto);
   }
 }

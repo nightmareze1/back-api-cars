@@ -102,4 +102,20 @@ export class CarsService {
       );
     }
   }
+
+  //CREATE CAR
+  async createCar(createCarDto: CreateCarDto): Promise<CarInterface> {
+    try {
+      const carCreated = await this.carModel.create(createCarDto);
+      return carCreated;
+    } catch (err) {
+      throw new HttpException(
+        {
+          status: HttpStatus.NOT_FOUND,
+          error: `Imposible to create car`,
+        },
+        HttpStatus.NOT_FOUND,
+      );
+    }
+  }
 }
