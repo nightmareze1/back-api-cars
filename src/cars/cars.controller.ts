@@ -27,7 +27,7 @@ export class CarsController {
 
   //FIND CAR FOR NAME
   @Get('/findAll/name')
-  getCarWithName(@Query() query): Promise<CarInterface[]> {
-    return this.carService.getCarWithName(query);
+  getCarsWithName(@Query() query): Promise<CarInterface[]> {
+    return this.carService.getCarsWithName(query);
   }
 }

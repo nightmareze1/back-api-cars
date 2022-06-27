@@ -16,7 +16,7 @@ export class CarsService {
   }
 
   //FIND CAR FOR NAME
-  async getCarWithName(query): Promise<CarInterface[]> {
+  async getCarsWithName(query): Promise<CarInterface[]> {
     console.log(query);
     const { name, limit, offset } = query;
     return await this.carModel.find({ name: name }).limit(limit).skip(offset);
