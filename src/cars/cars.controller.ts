@@ -9,6 +9,8 @@ import {
   Query,
   Res,
   Req,
+  HttpStatus,
+  HttpCode,
 } from '@nestjs/common';
 import { CarsService } from './cars.service';
 import { CarInterface } from './interfaces/cars.interface';
@@ -18,7 +20,7 @@ export class CarsController {
   constructor(private readonly carService: CarsService) {}
 
   @Get('/findAll')
-  getAllCars(@Query() query): Promise<CarInterface[]> {
+  getAllCars(@Query() query, @Res() res: Response): Promise<CarInterface[]> {
     return this.carService.getAllCars(query);
   }
 
