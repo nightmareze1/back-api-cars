@@ -19,11 +19,13 @@ import { CarInterface } from './interfaces/cars.interface';
 export class CarsController {
   constructor(private readonly carService: CarsService) {}
 
+  //FIND ALL CARS
   @Get('/findAll')
-  getAllCars(@Query() query, @Res() res: Response): Promise<CarInterface[]> {
+  getAllCars(@Query() query): Promise<CarInterface[]> {
     return this.carService.getAllCars(query);
   }
 
+  //FIND CAR FOR NAME
   @Get('/findAll/name')
   getCarWithName(@Query() query): Promise<CarInterface[]> {
     return this.carService.getCarWithName(query);
