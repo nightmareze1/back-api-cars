@@ -13,7 +13,7 @@ export const CarSchema = new Schema({
     type: String,
     require: true,
   },
-  imageUrl: {
+  images: {
     type: String,
     // require: true,
   },
