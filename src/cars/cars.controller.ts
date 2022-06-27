@@ -11,6 +11,8 @@ import {
   Req,
   HttpStatus,
   HttpCode,
+  HttpException,
+  NotFoundException,
 } from '@nestjs/common';
 import { CarsService } from './cars.service';
 import { CarInterface } from './interfaces/cars.interface';
@@ -29,5 +31,10 @@ export class CarsController {
   @Get('/findAll/name')
   getCarsWithName(@Query() query): Promise<CarInterface[]> {
     return this.carService.getCarsWithName(query);
+  }
+  //FIND CAR FOR ID
+  @Get('/findOne/:id')
+  getOneCarforId(@Param('id') id): Promise<CarInterface> {
+    return this.carService.getOneCarforId(id);
   }
 }
