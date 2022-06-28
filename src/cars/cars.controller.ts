@@ -1,4 +1,5 @@
 import {
+  Headers,
   Controller,
   Get,
   Put,
@@ -34,7 +35,9 @@ export class CarsController {
 
   //FIND ALL CARS
   @Get('/findAll')
-  getAllCars(@Query() query): Promise<CarInterface[]> {
+  getAllCars(@Query() query, @Headers() headers): Promise<CarInterface[]> {
+    const { token } = headers;
+    console.log(token);
     return this.carService.getAllCars(query);
   }
 
