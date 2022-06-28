@@ -16,8 +16,13 @@ import { CarsController } from './cars/cars.controller';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule implements NestModule {
-  configure(consumer: MiddlewareConsumer) {
-    consumer.apply(LoggerMiddleware).forRoutes(CarsController);
-  }
-}
+//DESPUES TENGO QUE PROBARLO CON EL TOKEN
+
+// export class AppModule implements NestModule {
+//   configure(consumer: MiddlewareConsumer) {
+//     consumer.apply(LoggerMiddleware).forRoutes(CarsController);
+//   }
+// }
+
+//DESPUES TENGO QUE COMENTAR ESTO Y DESCOMENTAR LO QUE ESTA COMENTADO ARRAIBA PARA PROBARLO
+export class AppModule {}
