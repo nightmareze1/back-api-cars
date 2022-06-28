@@ -8,12 +8,12 @@ export class LoggerMiddleware implements NestMiddleware {
   use(req: Request, res: Response, next: NextFunction) {
     console.log('...ESTE ES MI MIDDLE WARE');
 
-    const token = req.header('token');
-    if (!token)
-      res.status(401).json({
-        error: "Incluya el token en la cabeceras| ** token: 'su token' **",
-      });
     try {
+      const token = req.header('token');
+      if (!token)
+        res.status(401).json({
+          error: "Incluya el token en la cabeceras| ** token: 'su token' **",
+        });
       const verified = verify(token, TOKEN_SECRET.TOKEN_SECRET);
 
       //   const admin = verified.role.includes('ADMIN');
@@ -32,7 +32,5 @@ export class LoggerMiddleware implements NestMiddleware {
       );
       res.status(401).json({ error: 'incorrect token credentials' });
     }
-
-    // next();
   }
 }
