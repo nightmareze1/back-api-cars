@@ -65,4 +65,10 @@ export class UsersController {
   createCar(@Body() createUserDto: CreateUserDto): Promise<UserInterface> {
     return this.userService.createUser(createUserDto);
   }
+
+  //LOGIN USER
+  @Post('/login')
+  loginUser(@Body() createUserDto: CreateUserDto): Promise<UserInterface> {
+    return this.userService.loginUser(createUserDto);
+  }
 }
