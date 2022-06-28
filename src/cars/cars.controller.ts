@@ -70,6 +70,7 @@ export class CarsController {
   createCar(@Body() createCarDto: CreateCarDto): Promise<CarInterface> {
     return this.carService.createCar(createCarDto);
   }
+
   //Upload one file
   @Post('file')
   @UseInterceptors(
@@ -98,9 +99,10 @@ export class CarsController {
   )
   uploadFile(@UploadedFiles() file: Express.Multer.File) {
     return {
-      url: `Archivo ${file.filename} cargado correctamente`,
+      succses: `Upload photo `,
     };
   }
+
   //Upload multiple files
   @Post('files')
   @UseInterceptors(
