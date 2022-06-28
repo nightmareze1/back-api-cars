@@ -14,8 +14,12 @@ export const CarSchema = new Schema({
     require: true,
   },
   images: {
-    type: String,
-    // require: true,
+    type: [
+      {
+        type: String,
+      },
+    ],
+    default: ['no image'],
   },
   createdAt: {
     type: Date,
