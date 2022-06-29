@@ -15,5 +15,5 @@ export const UserSchema = new Schema({
     require: true,
   },
 
-  cars: [{ type: Schema.Types.ObjectId, ref: 'Cars' }],
+  // cars: [{ type: Schema.Types.ObjectId, ref: 'Cars' }],
 });
