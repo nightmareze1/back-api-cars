@@ -14,4 +14,6 @@ export const UserSchema = new Schema({
     type: String,
     require: true,
   },
+
+  cars: [{ type: Schema.Types.ObjectId, ref: 'Cars' }],
 });
