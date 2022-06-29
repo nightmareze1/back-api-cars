@@ -9,10 +9,14 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CreateCarDto } from './dto/cars.dto';
 import { CarInterface } from './interfaces/cars.interface';
+import { PhotoInterface } from './interfaces/photos.interface';
 
 @Injectable()
 export class CarsService {
-  constructor(@InjectModel('Cars') private carModel: Model<CarInterface>) {}
+  constructor(
+    @InjectModel('Cars') private carModel: Model<CarInterface>,
+    @InjectModel('Photos') private photoModel: Model<PhotoInterface>,
+  ) {}
 
   //FIND ALL CARS
   async getAllCars(query): Promise<CarInterface[]> {
@@ -112,6 +116,7 @@ export class CarsService {
   async createCar(createCarDto: CreateCarDto): Promise<CarInterface> {
     try {
       const carCreated = await this.carModel.create(createCarDto);
+      const photoCreated = await this.photoModel.create({ name: 'dsadasd' });
       return carCreated;
     } catch (err) {
       throw new HttpException(
