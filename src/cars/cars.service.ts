@@ -16,10 +16,14 @@ export class CarsService {
 
   //FIND ALL CARS
   async getAllCars(query): Promise<CarInterface[]> {
-    const { limit, offset } = query;
+    const { limit, offset, sort } = query;
 
     try {
-      return await this.carModel.find({}).limit(limit).skip(offset);
+      return await this.carModel
+        .find({})
+        .limit(limit)
+        .skip(offset)
+        .sort({ price: sort });
     } catch (error) {
       throw new HttpException(
         {
@@ -33,7 +37,7 @@ export class CarsService {
 
   //FIND CAR FOR NAME
   async getCarsWithName(query): Promise<CarInterface[]> {
-    const { name, limit, offset } = query;
+    const { name, limit, offset, sort } = query;
 
     try {
       return await this.carModel
@@ -41,6 +45,7 @@ export class CarsService {
           $or: [{ name: { $regex: name, $options: 'i' } }],
         })
         .limit(limit)
+        .sort({ price: sort })
         .skip(offset);
     } catch (error) {
       throw new HttpException(
