@@ -117,6 +117,7 @@ export class CarsService {
     try {
       const carCreated = await this.carModel.create(createCarDto);
       // const photoCreated = await this.photoModel.create({ name: 'dsadasd' });
+
       return carCreated;
     } catch (err) {
       throw new HttpException(

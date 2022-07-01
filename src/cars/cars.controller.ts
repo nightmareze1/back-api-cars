@@ -132,7 +132,7 @@ export class CarsController {
   )
   uploadFiles(@UploadedFiles() files: Array<Express.Multer.File>) {
     return files.map((item) => {
-      return { url: item.filename };
+      return { name: item.filename };
     });
   }
 
