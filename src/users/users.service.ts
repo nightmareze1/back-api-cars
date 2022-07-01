@@ -112,7 +112,6 @@ export class UsersService {
     let { username, password, email } = createUserDto;
     const salt = await bcrypt.genSalt(10);
     password = await bcrypt.hash(password, salt);
-    console.log(password);
     try {
       const found = await this.userModel.findOne({ email: email });
       if (found) {
