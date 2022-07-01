@@ -37,7 +37,6 @@ export class CarsController {
   @Get('/findAll')
   getAllCars(@Query() query, @Headers() headers): Promise<CarInterface[]> {
     const { token } = headers;
-    console.log(token);
     return this.carService.getAllCars(query);
   }
 
@@ -139,7 +138,6 @@ export class CarsController {
 
   @Get('uploads/:imagename')
   findProfileImage(@Param() params, @Res() res) /* : Observable<Object>  */ {
-    console.log(params);
     const { imagename } = params;
 
     return of(res.sendFile(join(process.cwd(), `uploads/${imagename}`)));
