@@ -21,16 +21,18 @@ export class CarsService {
   //FIND ALL CARS
   async getAllCars(query): Promise<any> {
     const { limit, offset, sort } = query;
-    const count = await this.carModel.count();
-    const valuePage = count / 4;
-    const pages = valuePage <= 1 ? 1 : parseInt(valuePage.toFixed());
+
+    const totalCountDocuments = await this.carModel.count();
+    const totalPages = Math.ceil(totalCountDocuments / limit);
+    const currentPage = Math.ceil(totalCountDocuments % offset);
+
     try {
       const results = await this.carModel
         .find({})
         .limit(limit)
         .skip(offset)
         .sort({ price: sort });
-      return { results, count, pages };
+      return { results, totalCountDocuments, totalPages, currentPage };
     } catch (error) {
       throw new HttpException(
         {
@@ -45,7 +47,7 @@ export class CarsService {
   //FIND CAR FOR NAME
   async getCarsWithName(query): Promise<any> {
     const { name, limit, offset, sort } = query;
-    const count = await this.carModel
+    const totalCountDocuments = await this.carModel
       .find({
         $or: [{ name: { $regex: name, $options: 'i' } }],
       })
@@ -53,8 +55,9 @@ export class CarsService {
       .sort({ price: sort })
       .skip(offset)
       .count();
-    const valuePage = count / 4;
-    const pages = valuePage <= 1 ? 1 : parseInt(valuePage.toFixed());
+
+    const totalPages = Math.ceil(totalCountDocuments / limit);
+    const currentPage = Math.ceil(totalCountDocuments % offset);
 
     try {
       const results = await this.carModel
@@ -64,7 +67,7 @@ export class CarsService {
         .limit(limit)
         .sort({ price: sort })
         .skip(offset);
-      return { results, count, pages };
+      return { results, totalCountDocuments, totalPages, currentPage };
     } catch (error) {
       throw new HttpException(
         {
