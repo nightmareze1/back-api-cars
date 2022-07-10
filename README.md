@@ -44,7 +44,7 @@ Puede hacer click sobre los contenidos para hacer una búsqueda más rápida
 
 ## Descripción
 
-Data warehouse, es una aplicación que gestiona los clientes de una gran cantidad de compañias, proporcionando datos de los contactos, como numero de telefono email, etc.
+Este es el back Cars api, es una aplicación en la cual se pueden cargar autos simulando la carga, la edición y la eliminación de autos como así también el registrarse en la misma aplicación, El loguearse le va a permitir cargar editar los productos, que en esta aplicación en particular son autos
 
 #### Tecnologias Utilizadas
 
@@ -268,6 +268,8 @@ http://localhost:4000/cars/createCar POST: Esta ruta crea uno o varios autos, se
 ## UPLOAD MULTIPLE PHOTO
 
 http://localhost:4000/cars/files POST:Esta ruta sirve para subir muchas fotos en la carpeta Uploads, internamente utiliza la librería multer para facilitar esta tarea, si quiere probar esta ruta individualmente con postman, el body tiene que ser del tipo from data el key tiene que ser files y cargar la imagen que desea claro esta si quiere hacerlo únicamente desde el back
+
+## USERS
 
 ## Desarrollador
 
