@@ -57,10 +57,12 @@ Data warehouse, es una aplicación que gestiona los clientes de una gran cantida
 
 #### Instalación
 
-Abrir un terminal y ejecutar el comando docker-compose up de esa manera se va a correr el contenedor que tiene la base de datos
-de mongo db y la aplicacion
+Abrir un terminal y ejecutar el comando docker-compose up de esa manera se va a correr el contenedor de docker, que tiene alojada la DB de Mongo. Además de toda la aplicación del back-end. De esa forma se instalarán todas la dependencia automáticamente gracias al Dockerfile.
+El puerto por defecto de la aplicación es el 4000
 
 #### Base de datos
+
+Como ya se dijo anteriormente, la base de datos es Mongo DB. La misma consta de varias colecciones, entre ellas Users y Cars.
 
 ## Desarrollador
 
