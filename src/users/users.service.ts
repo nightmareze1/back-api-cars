@@ -37,14 +37,18 @@ export class UsersService {
 
   //FIND USER FOR NAME
   async getUsersWithName(query): Promise<UserInterface[]> {
-    const { name, limit, offset } = query;
+    const { name, limit, offset, sort } = query;
 
     try {
       return await this.userModel
         .find({
-          $or: [{ name: { $regex: name, $options: 'i' } }],
+          $or: [
+            { email: { $regex: name, $options: 'i' } },
+            { username: { $regex: name, $options: 'i' } },
+          ],
         })
         .limit(limit)
+        .sort({ price: sort })
         .skip(offset);
     } catch (error) {
       throw new HttpException(
