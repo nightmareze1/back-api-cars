@@ -70,7 +70,7 @@ Como ya se dijo anteriormente, la base de datos es Mongo DB. La misma consta de 
 
 ## FIND ALL CARS
 
-http://localhost:4000/cars/findAll?offset=28&limit=2 GET: Esta ruta refleja todos los cars que se encuentran en la base de datos, y devuelve un json.
+http://localhost:4000/cars/findAll?offset=0&limit=2 GET: Esta ruta refleja todos los cars que se encuentran en la base de datos, y devuelve un json.
 
 ```javascript
 //Example claro esta esto seria en json
