@@ -374,7 +374,7 @@ body del usuario a actualizar
 
 http://localhost:4000/users/login POST: Esta ruta sirve para loguear un usuario en específico
 
-Respuesta un token
+Respuesta un token este token es el que se tiene que usar en la cabecera
 
 ```javascript
      {
