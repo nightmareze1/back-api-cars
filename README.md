@@ -70,82 +70,160 @@ Como ya se dijo anteriormente, la base de datos es Mongo DB. La misma consta de 
 
 ## FIND ALL CARS
 
-http://localhost:4000/cars/findAll?offset=0&limit=2 GET: Esta ruta refleja todos los autos que se encuentran en la base de datos, además puede ordenar por precio, también puede ponerle un límite de la cantidad de autos que desea, como así también cuantos desea saltar
+http://localhost:4000/cars/findAll?offset=0&limit=2 GET: Esta ruta muestra todos los autos que se encuentran en la base de datos, además puede ordenar por precio, también puede ponerle un límite de la cantidad de autos que desea, como así también cuantos desea saltar
 
 ```javascript
-//Ejemplo claro esta esto seria en json
+//Ejemplo
 [
   {
-    _id: '62c61e494c3e1ced7a851c8a',
-    name: 'ferrari',
-    price: 2502448,
-    description:
+   " _id: '62c61e494c3e1ced7a851c8a',
+    "name": 'ferrari',
+    "price": 2502448,
+    "description":
       'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
-    images: [
+    "images": [
       {
-        name: 'auto1.jpg',
-        _id: '62c61e494c3e1ced7a851c8b',
+        "name": 'auto1.jpg',
+        "_id": '62c61e494c3e1ced7a851c8b',
       },
     ],
-    createdAt: '2022-07-06T23:44:09.993Z',
-    __v: 0,
+    "createdAt": '2022-07-06T23:44:09.993Z',
+   " __v": 0,
   },
   {
-    _id: '62c61e4a4c3e1ced7a851cc8',
-    name: 'audi',
-    price: 2517643,
-    description:
+    "_id": '62c61e4a4c3e1ced7a851cbe',
+    "name": 'ferrari',
+    "price": 2636816,
+    "description":
       'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
-    images: [
+    "images": [
       {
-        name: 'auto1.jpg',
-        _id: '62c61e4a4c3e1ced7a851cc9',
+       " name": 'auto2.jpg',
+        "_id": '62c61e4a4c3e1ced7a851cbf',
       },
     ],
-    createdAt: '2022-07-06T23:44:10.023Z',
-    __v: 0,
+    "createdAt": '2022-07-06T23:44:10.021Z',
+    "__v": 0,
   },
 ];
 ```
 
 ## FIND ALL CARS FOR NAME
 
-http://localhost:4000/cars/findAll/name?offset=0&limit=2&sort=-1&name=Ferrari GET: Esta ruta refleja todos los autos que se encuentran en la base de datos segun la busqueda provista, además puede ordenar por precio, también puede ponerle un límite de la cantidad de autos que desea, como así también cuantos desea saltar
+http://localhost:4000/cars/findAll/name?offset=0&limit=2&sort=-1&name=Ferrari GET: Esta ruta muestra todos los autos que se encuentran en la base de datos segun la busqueda provista, además puede ordenar por precio, también puede ponerle un límite de la cantidad de autos que desea, como así también cuantos desea saltar
 
 ```javascript
-//Ejemplo claro esta esto seria en json
-[
+//Ejemplo
   {
-    _id: '62c61e494c3e1ced7a851c8a',
-    name: 'ferrari',
-    price: 2502448,
-    description:
+   " _id: '62c61e494c3e1ced7a851c8a',
+    "name": 'ferrari',
+    "price": 2502448,
+    "description":
       'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
-    images: [
+    "images": [
       {
-        name: 'auto1.jpg',
-        _id: '62c61e494c3e1ced7a851c8b',
+        "name": 'auto1.jpg',
+        "_id": '62c61e494c3e1ced7a851c8b',
       },
     ],
-    createdAt: '2022-07-06T23:44:09.993Z',
-    __v: 0,
+    "createdAt": '2022-07-06T23:44:09.993Z',
+   " __v": 0,
   },
   {
-    _id: '62c61e4a4c3e1ced7a851cbe',
-    name: 'ferrari',
-    price: 2636816,
-    description:
+    "_id": '62c61e4a4c3e1ced7a851cbe',
+    "name": 'ferrari',
+    "price": 2636816,
+    "description":
       'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
-    images: [
+    "images": [
       {
-        name: 'auto2.jpg',
-        _id: '62c61e4a4c3e1ced7a851cbf',
+       " name": 'auto2.jpg',
+        "_id": '62c61e4a4c3e1ced7a851cbf',
       },
     ],
-    createdAt: '2022-07-06T23:44:10.021Z',
-    __v: 0,
+    "createdAt": '2022-07-06T23:44:10.021Z',
+    "__v": 0,
   },
 ];
+```
+
+## FIND ONE FOR ID
+
+http://localhost:4000/cars/findOneForId/Id GET: Esta ruta muestra un auto segun su id
+
+```javascript
+//Ejemplo
+  {
+    "_id": '62c61e494c3e1ced7a851c8a',
+    "name": 'ferrari',
+    "price": 2502448,
+    "description":
+      'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
+    "images": [
+      {
+       " name": 'auto1.jpg',
+        "_id": '62c61e494c3e1ced7a851c8b',
+      },
+    ],
+   " createdAt": '2022-07-06T23:44:09.993Z',
+    "__v": 0,
+  }
+```
+
+## IMAGE VIEW
+
+http://localhost:4000/cars/uploads/auto.jpg GET: Esta ruta muestra una imagen en base al nombre en el que se guardo la misma por defecto las imagenes las trae de la carpeta Uploads
+
+## DELETE ONE CAR FOR ID
+
+http://localhost:4000/cars/deleteOneForId/Id DELTE:Esta ruta borra un auto por el id, luego como respuesta devuelve el auto que se borro
+
+```javascript
+//Ejemplo de respuesta
+{
+    "_id": "62c61e494c3e1ced7a851c7a",
+    "name": "pagany",
+    "price": 9979913,
+    "description": "Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores",
+    "images": [
+        {
+            "name": "auto1.jpg",
+            "_id": "62c61e494c3e1ced7a851c7b"
+        }
+    ],
+    "createdAt": "2022-07-06T23:44:09.978Z",
+    "__v": 0
+}
+
+
+```
+
+## UPDATE ONE CAR FOR ID
+
+http://localhost:4000/cars/updateOneForId/id PUT:Esta ruta actualiza un auto por el id, luego como respuesta devuelve el auto que se actualizo
+
+```javascript
+//Ejemplo de body
+{
+  {
+    "name": "Audi TT",
+    "price": 123800,
+    "description": "Consumo de combustible combinado¹: 7,0–6,0 l / 100 km\nEmisiones de CO₂ combinadas¹: 161-137 g / km\n\nDos décadas después de su debut, el Audi TT Coupé sigue cautivando por su característico vocabulario de diseño, su gran placer de conducción y su amplia gama de equipamiento de serie.",
+    "images": [
+        {
+            "name": "e2d9fb9b-a1a4-4e09-9ffc-9d9c1baff3dd.jpg"
+        },
+        {
+            "name": "e2d9fb9b-a1a4-4e09-9ffc-9d9c1baff3dd.jpg"
+        },
+        {
+            "name": "e2d9fb9b-a1a4-4e09-9ffc-9d9c1baff3dd.jpg"
+        }
+    ]
+}
+}
+
+
 ```
 
 ## Desarrollador
