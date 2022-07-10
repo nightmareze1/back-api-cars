@@ -64,6 +64,30 @@ El puerto por defecto de la aplicación es el 4000
 
 Como ya se dijo anteriormente, la base de datos es Mongo DB. La misma consta de varias colecciones, entre ellas Users y Cars.
 
+## End points
+
+## Cars
+
+http://localhost:4000/cars/findAll?offset=28&limit=2 GET: Esta ruta refleja todos los cars que se encuentran en la base de datos, y devuelve un json.
+
+```javascript
+//Example
+ {
+   [
+
+ "id": "1",
+        "nombre": "Hamburguesa",
+        "descripcion": "Hamburguesa completa",
+        "precio":"850",
+        "createdAt": "2021-05-01T01:07:50.000Z",
+        "updatedAt": "2021-05-01T01:07:50.000Z"
+
+ ]
+
+
+}
+```
+
 ## Desarrollador
 
 - Ezequiel Rey - [eze.rey92@gmail.com]
