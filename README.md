@@ -21,3 +21,49 @@
 </p>
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+
+# Data warehouse 4to proyecto de Acamica
+
+> Estas son las instrucciones de la aplicación Online (Data warehouse)
+
+---
+
+### Contenidos
+
+Puede hacer click sobre los contenidos para hacer una búsqueda más rápida
+
+- [Descripción ](#Descripción)
+- [Como Usarla](#Como-Usarla)
+- [Instalacion](#Instalacion)
+- [Desarrollador](#Desarrollador)
+
+---
+
+## Descripción
+
+Data warehouse, es una aplicación que gestiona los clientes de una gran cantidad de compañias, proporcionando datos de los contactos, como numero de telefono email, etc.
+
+#### Tecnologias Utilizadas
+
+- Node.js
+- Typescript
+- MongoDB
+
+[Volver al inicio](#Contenidos)
+
+---
+
+## Como Usarla
+
+#### Instalación
+
+Abrir un terminal y ejecutar el comando docker-compose up de esa manera se va a correr el contenedor que tiene la base de datos
+de mongo db y la aplicacion
+
+#### Base de datos
+
+## Desarrollador
+
+- Ezequiel Rey - [eze.rey92@gmail.com]
+
+[Volver al inicio](#Contenidos)
