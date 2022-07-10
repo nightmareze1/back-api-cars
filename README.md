@@ -273,7 +273,7 @@ http://localhost:4000/cars/files POST:Esta ruta sirve para subir muchas fotos en
 
 ## FIND ALL USERS
 
-http://localhost:4000/users/findAll?limit=1&offset=0 GET: Esta ruta busca todos los usuarios en la base de datos, tambien puede traer un solo usuario o saltar usuarios.
+http://localhost:4000/users/findAll?limit=0&offset=0 GET: Esta ruta busca todos los usuarios en la base de datos, tambien puede traer un solo usuario o saltar usuarios.
 
 ```javascript
 [
