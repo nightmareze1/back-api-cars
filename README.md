@@ -296,7 +296,7 @@ http://localhost:4000/users/findAll?limit=0&offset=0 GET: Esta ruta busca todos 
 
 ## FIND ALL USERS FOR EMAIL OR USERNAME
 
-http://localhost:4000/users/findAll/name?name=eze2@gmail.com&limit=0&offset=0 GET: Esta ruta busca todos los usuarios en la base de datos, tanto por nombre como por email, si quiere un usuario en especifico conviene hacer una búsqueda por mail
+http://localhost:4000/users/findAll/name?name=eze@gmail.com&limit=0&offset=0 GET: Esta ruta busca todos los usuarios en la base de datos, tanto por nombre como por email, si quiere un usuario en especifico conviene hacer una búsqueda por mail
 
 ```javascript
 [
@@ -305,13 +305,6 @@ http://localhost:4000/users/findAll/name?name=eze2@gmail.com&limit=0&offset=0 GE
     'username ': 'Matuzay32',
     'email ': 'eze@gmail.com',
     'password ': '$2b$10$ZHTdRrGc6Lc/iHN9j6A/AuzxNBvNwB6uxMHI9cr24wQxycSMt5K0O',
-    '__v ': 0,
-  },
-  {
-    '_id ': '62c625284c3e1ced7a851d52',
-    'username ': 'Matuzay323',
-    'email ': 'eze2@gmail.com',
-    'password ': '$2b$10$85piqdW5SepqIbZoOLnfb.pRmx/lFP10rLHuy7jDEx4bdcT43ZCye',
     '__v ': 0,
   },
 ];
