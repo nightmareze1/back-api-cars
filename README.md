@@ -149,7 +149,7 @@ http://localhost:4000/cars/findAll/name?offset=0&limit=2&sort=-1&name=Ferrari GE
 
 ## FIND ONE FOR ID
 
-http://localhost:4000/cars/findOneForId/Id GET: Esta ruta muestra un auto segun su id
+http://localhost:4000/cars/findOneForId/Id GET: Esta ruta muestra un auto según su id
 
 ```javascript
 //Ejemplo
@@ -172,11 +172,11 @@ http://localhost:4000/cars/findOneForId/Id GET: Esta ruta muestra un auto segun 
 
 ## IMAGE VIEW
 
-http://localhost:4000/cars/uploads/auto.jpg GET: Esta ruta muestra una imagen en base al nombre en el que se guardo la misma por defecto las imagenes las trae de la carpeta Uploads
+http://localhost:4000/cars/uploads/auto.jpg GET: Esta ruta muestra una imagen en base al nombre con el que se guardó la misma, por defecto las imágenes las trae de la carpeta Uploads
 
 ## DELETE ONE CAR FOR ID
 
-http://localhost:4000/cars/deleteOneForId/Id DELTE:Esta ruta borra un auto por el id, luego como respuesta devuelve el auto que se borro
+http://localhost:4000/cars/deleteOneForId/Id DELETE:Esta ruta borra un auto por el, id luego como respuesta devuelve el auto que se borró
 
 ```javascript
 //Ejemplo de respuesta
@@ -200,7 +200,7 @@ http://localhost:4000/cars/deleteOneForId/Id DELTE:Esta ruta borra un auto por e
 
 ## UPDATE ONE CAR FOR ID
 
-http://localhost:4000/cars/updateOneForId/id PUT:Esta ruta actualiza un auto por el id, luego como respuesta devuelve el auto que se actualizo
+http://localhost:4000/cars/updateOneForId/id PUT:Esta ruta actualiza un auto por el, id, luego como respuesta devuelve el auto que se actualizó, se debe enviar un body de lo que se quiere actualizar
 
 ```javascript
 //Ejemplo de body
