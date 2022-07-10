@@ -114,6 +114,7 @@ http://localhost:4000/cars/findAll/name?offset=0&limit=2&sort=-1&name=Ferrari GE
 
 ```javascript
 //Ejemplo
+ [
   {
    " _id: '62c61e494c3e1ced7a851c8a',
     "name": 'ferrari',
