@@ -35,6 +35,7 @@ Puede hacer click sobre los contenidos para hacer una búsqueda más rápida
 - [Descripción ](#Descripción)
 - [End points ](#End-points)
 - [Cars ](#Cars)
+- [Token ](#Token)
 - [Como Usarla](#Como-Usarla)
 - [Base de datos](#Base-de-datos)
 - [Desarrollador](#Desarrollador)
@@ -66,12 +67,12 @@ El puerto por defecto de la aplicación es el 4000
 
 Como ya se dijo anteriormente, la base de datos es Mongo DB. La misma consta de varias colecciones, entre ellas Users y Cars.
 
-## End points
-
-## TOKEN
+## Token
 
 Todas las rutas a excepción de las de del tipo get o create user y login llevan el token en las cabeceras, para que estas puedan funcionar de manera correcta. Si lo hace desde postman tiene que ingresar los datos de la siguiente forma, donde la key es token y el valor tiene que ser su token
 KEY:token VALUE: su token
+
+## End points
 
 ## Cars
 
