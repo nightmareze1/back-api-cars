@@ -76,34 +76,34 @@ http://localhost:4000/cars/findAll?offset=0&limit=2 GET: Esta ruta muestra todos
 //Ejemplo
 [
   {
-   " _id: '62c61e494c3e1ced7a851c8a',
-    "name": 'ferrari',
-    "price": 2502448,
-    "description":
+    ' _id ': '62c61e494c3e1ced7a851c8a',
+    ' name ': 'ferrari',
+    ' price ': 2502448,
+    ' description ':
       'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
-    "images": [
+    ' images ': [
       {
-        "name": 'auto1.jpg',
-        "_id": '62c61e494c3e1ced7a851c8b',
+        '  name ': 'auto1.jpg',
+        ' _id ': '62c61e494c3e1ced7a851c8b',
       },
     ],
-    "createdAt": '2022-07-06T23:44:09.993Z',
-   " __v": 0,
+    'createdAt ': '2022-07-06T23:44:09.993Z',
+    ' __v': 0,
   },
   {
-    "_id": '62c61e4a4c3e1ced7a851cbe',
-    "name": 'ferrari',
-    "price": 2636816,
-    "description":
+    ' _id ': '62c61e4a4c3e1ced7a851cbe',
+    ' name ': 'ferrari',
+    ' price ': 2636816,
+    ' description ':
       'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
-    "images": [
+    ' images ': [
       {
-       " name": 'auto2.jpg',
-        "_id": '62c61e4a4c3e1ced7a851cbf',
+        ' name': 'auto2.jpg',
+        ' _id ': '62c61e4a4c3e1ced7a851cbf',
       },
     ],
-    "createdAt": '2022-07-06T23:44:10.021Z',
-    "__v": 0,
+    ' createdAt ': '2022-07-06T23:44:10.021Z',
+    ' __v ': 0,
   },
 ];
 ```
@@ -233,22 +233,22 @@ http://localhost:4000/cars/createCar POST: Esta ruta crea uno o varios autos, se
 //Ejemplo body
 [
   {
-    name: 'ferrari',
-    price: 2502448,
-    description:
+    ' price ': 2502448,
+    ' name ': 'ferrari',
+    ' description ':
       'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
-    images: [
+    ' images ': [
       {
-        name: 'auto1.jpg',
+        '  name ': 'auto1.jpg',
       },
     ],
   },
   {
-    name: 'ferrari',
-    price: 2636816,
-    description:
+    ' name ': 'ferrari',
+    ' price ': 2636816,
+    '  description ':
       'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
-    images: [
+    ' images ': [
       {
         ' name': 'auto2.jpg',
       },
