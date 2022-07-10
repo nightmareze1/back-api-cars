@@ -73,7 +73,7 @@ Como ya se dijo anteriormente, la base de datos es Mongo DB. La misma consta de 
 http://localhost:4000/cars/findAll?offset=0&limit=2 GET: Esta ruta refleja todos los autos que se encuentran en la base de datos, además puede ordenar por precio, también puede ponerle un límite de la cantidad de autos que desea, como así también cuantos desea saltar
 
 ```javascript
-//Example claro esta esto seria en json
+//Ejemplo claro esta esto seria en json
 [
   {
     _id: '62c61e494c3e1ced7a851c8a',
@@ -113,7 +113,7 @@ http://localhost:4000/cars/findAll?offset=0&limit=2 GET: Esta ruta refleja todos
 http://localhost:4000/cars/findAll/name?offset=0&limit=2&sort=-1&name=Ferrari GET: Esta ruta refleja todos los autos que se encuentran en la base de datos segun la busqueda provista, además puede ordenar por precio, también puede ponerle un límite de la cantidad de autos que desea, como así también cuantos desea saltar
 
 ```javascript
-//Example claro esta esto seria en json
+//Ejemplo claro esta esto seria en json
 [
   {
     _id: '62c61e494c3e1ced7a851c8a',
