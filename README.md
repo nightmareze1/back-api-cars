@@ -259,6 +259,10 @@ http://localhost:4000/cars/createCar POST: Esta ruta crea uno o varios autos, se
 ];
 ```
 
+## UPLOAD MULTIPLE PHOTO
+
+http://localhost:4000/cars/files POST:Esta ruta sirve para subir muchas fotos en la carpeta Uploads, internamente utiliza la librería multer para facilitar esta tarea, si quiere probar esta ruta individualmente con postman, el body tiene que ser del tipo from data el key tiene que ser files y cargar la imagen que desea claro esta si quiere hacerlo únicamente desde el back
+
 ## Desarrollador
 
 - Ezequiel Rey - [eze.rey92@gmail.com]
