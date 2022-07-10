@@ -72,20 +72,38 @@ http://localhost:4000/cars/findAll?offset=28&limit=2 GET: Esta ruta refleja todo
 
 ```javascript
 //Example
- {
-   [
-
- "id": "1",
-        "nombre": "Hamburguesa",
-        "descripcion": "Hamburguesa completa",
-        "precio":"850",
-        "createdAt": "2021-05-01T01:07:50.000Z",
-        "updatedAt": "2021-05-01T01:07:50.000Z"
-
- ]
-
-
-}
+[
+  {
+    _id: '62c61e494c3e1ced7a851c8a',
+    name: 'ferrari',
+    price: 2502448,
+    description:
+      'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
+    images: [
+      {
+        name: 'auto1.jpg',
+        _id: '62c61e494c3e1ced7a851c8b',
+      },
+    ],
+    createdAt: '2022-07-06T23:44:09.993Z',
+    __v: 0,
+  },
+  {
+    _id: '62c61e4a4c3e1ced7a851cc8',
+    name: 'audi',
+    price: 2517643,
+    description:
+      'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
+    images: [
+      {
+        name: 'auto1.jpg',
+        _id: '62c61e4a4c3e1ced7a851cc9',
+      },
+    ],
+    createdAt: '2022-07-06T23:44:10.023Z',
+    __v: 0,
+  },
+];
 ```
 
 ## Desarrollador
