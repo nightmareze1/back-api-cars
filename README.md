@@ -35,6 +35,7 @@ Puede hacer click sobre los contenidos para hacer una búsqueda más rápida
 - [Descripción ](#Descripción)
 - [End points ](#End-points)
 - [Cars ](#Cars)
+- [Users ](#Users)
 - [Token ](#Token)
 - [Como Usarla](#Como-Usarla)
 - [Base de datos](#Base-de-datos)
@@ -269,7 +270,7 @@ http://localhost:4000/cars/createCar POST: Esta ruta crea uno o varios autos, se
 
 http://localhost:4000/cars/files POST:Esta ruta sirve para subir muchas fotos en la carpeta Uploads, internamente utiliza la librería multer para facilitar esta tarea, si quiere probar esta ruta individualmente con postman, el body tiene que ser del tipo from data el key tiene que ser files y cargar la imagen que desea claro esta si quiere hacerlo únicamente desde el back
 
-## USERS
+## Users
 
 ## FIND ALL USERS
 
@@ -324,7 +325,7 @@ http://localhost:4000/users/findOneForId/ID GET: Esta ruta busca un usuario en e
   },
 ```
 
-## DELE ONE USER FOR ID
+## DELETE ONE USER FOR ID
 
 http://localhost:4000/users/deleteOneForId/ID DELETE: Esta ruta borra un usuario en especifico por ID
 
@@ -338,6 +339,48 @@ devuelve el usuario borrado
     'password ': '$2b$10$ZHTdRrGc6Lc/iHN9j6A/AuzxNBvNwB6uxMHI9cr24wQxycSMt5K0O',
     '__v ': 0,
   },
+```
+
+## UPDATE ONE USER FOR ID
+
+http://localhost:4000/users/updateOneForId/ID PUT: Esta ruta actualiza un usuario en especifico por ID
+
+body del usuario a actualizar
+
+```javascript
+  {
+    'username ': 'userActualizado',
+    "password": "passActualizada",
+    'email ': 'Actualizado@gmail.com',
+  },
+```
+
+## CREATE USER
+
+http://localhost:4000/users/createUser POST: Esta ruta crea un usuario en especifico
+
+body del usuario a actualizar
+
+```javascript
+     {
+        "username": "eze12345",
+        "password": "Matuzay32",
+        "email": "ezedl@gmail.com"
+
+    }
+```
+
+## LOGIN USER
+
+http://localhost:4000/users/login POST: Esta ruta sirve para loguear un usuario en específico
+
+Respuesta un token
+
+```javascript
+     {
+    "message": "You are now authenticated",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1hdHV6YXkzMiIsImVtYWlsIjoiZXplQGdtYWlsLmNvbSIsIl9pZCI6IjYyYzYxZTllNGMzZTFjZWQ3YTg1MWQwOSIsImlhdCI6MTY1NzQ5MTEyNCwiZXhwIjoxNjU3NDk0NzI0fQ.GjJlM9bwKLjQVRhYJoWSQ4Bg4M6S8gcIjcOvfR6QBLc"
+}
 ```
 
 ## Desarrollador
