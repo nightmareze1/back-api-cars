@@ -324,6 +324,22 @@ http://localhost:4000/users/findOneForId/ID GET: Esta ruta busca un usuario en e
   },
 ```
 
+## DELE ONE USER FOR ID
+
+http://localhost:4000/users/deleteOneForId/ID DELETE: Esta ruta borra un usuario en especifico por ID
+
+devuelve el usuario borrado
+
+```javascript
+  {
+    '_id ': '62c61e9e4c3e1ced7a851d09',
+    'username ': 'Matuzay32',
+    'email ': 'eze@gmail.com',
+    'password ': '$2b$10$ZHTdRrGc6Lc/iHN9j6A/AuzxNBvNwB6uxMHI9cr24wQxycSMt5K0O',
+    '__v ': 0,
+  },
+```
+
 ## Desarrollador
 
 - Ezequiel Rey - [eze.rey92@gmail.com]
