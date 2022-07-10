@@ -131,7 +131,7 @@ export class UsersService {
       throw new HttpException(
         {
           status: HttpStatus.NOT_FOUND,
-          error: `Imposible to create user`,
+          error: error.message,
         },
         HttpStatus.NOT_FOUND,
       );
