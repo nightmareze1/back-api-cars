@@ -227,6 +227,38 @@ http://localhost:4000/cars/updateOneForId/id PUT:Esta ruta actualiza un auto por
 
 ```
 
+## CREATE CAR
+
+http://localhost:4000/cars/createCar POST: Esta ruta crea uno o varios autos segun el usuario lo prefiera debe tener las imagenes previamente guardadas en la carpeta uploads, o usar el metodo para guardar las mismas
+
+```javascript
+//Ejemplo
+[
+  {
+    name: 'ferrari',
+    price: 2502448,
+    description:
+      'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
+    images: [
+      {
+        name: 'auto1.jpg',
+      },
+    ],
+  },
+  {
+    name: 'ferrari',
+    price: 2636816,
+    description:
+      'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
+    images: [
+      {
+        ' name': 'auto2.jpg',
+      },
+    ],
+  },
+];
+```
+
 ## Desarrollador
 
 - Ezequiel Rey - [eze.rey92@gmail.com]
