@@ -205,7 +205,6 @@ http://localhost:4000/cars/updateOneForId/id PUT:Esta ruta actualiza un auto por
 
 ```javascript
 //Ejemplo de body
-{
   {
     "name": "Audi TT",
     "price": 123800,
@@ -221,7 +220,6 @@ http://localhost:4000/cars/updateOneForId/id PUT:Esta ruta actualiza un auto por
             "name": "e2d9fb9b-a1a4-4e09-9ffc-9d9c1baff3dd.jpg"
         }
     ]
-}
 }
 
 
