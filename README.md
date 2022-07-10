@@ -271,6 +271,29 @@ http://localhost:4000/cars/files POST:Esta ruta sirve para subir muchas fotos en
 
 ## USERS
 
+## FIND ALL USERS
+
+http://localhost:4000/users/findAll?limit=1&offset=0 GET: Esta ruta busca todos los usuarios en la base de datos, tambien puede traer un solo usuario o saltar usuarios.
+
+```javascript
+[
+  {
+    '_id ': '62c61e9e4c3e1ced7a851d09',
+    'username ': 'Matuzay32',
+    'email ': 'eze@gmail.com',
+    'password ': '$2b$10$ZHTdRrGc6Lc/iHN9j6A/AuzxNBvNwB6uxMHI9cr24wQxycSMt5K0O',
+    '__v ': 0,
+  },
+  {
+    '_id ': '62c625284c3e1ced7a851d52',
+    'username ': 'Matuzay323',
+    'email ': 'eze2@gmail.com',
+    'password ': '$2b$10$85piqdW5SepqIbZoOLnfb.pRmx/lFP10rLHuy7jDEx4bdcT43ZCye',
+    '__v ': 0,
+  },
+];
+```
+
 ## Desarrollador
 
 - Ezequiel Rey - [eze.rey92@gmail.com]
