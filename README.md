@@ -70,7 +70,7 @@ Como ya se dijo anteriormente, la base de datos es Mongo DB. La misma consta de 
 
 ## FIND ALL CARS
 
-http://localhost:4000/cars/findAll?offset=0&limit=2 GET: Esta ruta refleja todos los cars que se encuentran en la base de datos, y devuelve un json.
+http://localhost:4000/cars/findAll?offset=0&limit=2 GET: Esta ruta refleja todos los autos que se encuentran en la base de datos, además puede ordenar por precio, también puede ponerle un límite de la cantidad de autos que desea, como así también cuantos desea saltar
 
 ```javascript
 //Example claro esta esto seria en json
@@ -103,6 +103,46 @@ http://localhost:4000/cars/findAll?offset=0&limit=2 GET: Esta ruta refleja todos
       },
     ],
     createdAt: '2022-07-06T23:44:10.023Z',
+    __v: 0,
+  },
+];
+```
+
+## FIND ALL CARS FOR NAME
+
+http://localhost:4000/cars/findAll/name?offset=0&limit=2&sort=-1&name=Ferrari GET: Esta ruta refleja todos los autos que se encuentran en la base de datos segun la busqueda provista, además puede ordenar por precio, también puede ponerle un límite de la cantidad de autos que desea, como así también cuantos desea saltar
+
+```javascript
+//Example claro esta esto seria en json
+[
+  {
+    _id: '62c61e494c3e1ced7a851c8a',
+    name: 'ferrari',
+    price: 2502448,
+    description:
+      'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
+    images: [
+      {
+        name: 'auto1.jpg',
+        _id: '62c61e494c3e1ced7a851c8b',
+      },
+    ],
+    createdAt: '2022-07-06T23:44:09.993Z',
+    __v: 0,
+  },
+  {
+    _id: '62c61e4a4c3e1ced7a851cbe',
+    name: 'ferrari',
+    price: 2636816,
+    description:
+      'Este es un auto deportivo de primera linea no dude en consultar con nuestros asesores',
+    images: [
+      {
+        name: 'auto2.jpg',
+        _id: '62c61e4a4c3e1ced7a851cbf',
+      },
+    ],
+    createdAt: '2022-07-06T23:44:10.021Z',
     __v: 0,
   },
 ];
