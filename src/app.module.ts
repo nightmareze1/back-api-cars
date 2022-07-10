@@ -1,4 +1,9 @@
-import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import {
+  MiddlewareConsumer,
+  Module,
+  NestModule,
+  RequestMethod,
+} from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -16,12 +21,24 @@ import { CarsController } from './cars/cars.controller';
   controllers: [AppController],
   providers: [AppService],
 })
-//DESPUES TENGO QUE PROBARLO CON EL TOKEN
-// export class AppModule implements NestModule {
-//   configure(consumer: MiddlewareConsumer) {
-//     consumer.apply(LoggerMiddleware).forRoutes(CarsController);
-//   }
-// }
+// DESPUES TENGO QUE PROBARLO CON EL TOKEN
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer
+      .apply(LoggerMiddleware)
+      .exclude(
+        { path: 'cars', method: RequestMethod.GET },
+        'cars/findAll',
+        { path: 'cars', method: RequestMethod.GET },
+        'cars/findAll/name',
+        { path: 'cars', method: RequestMethod.GET },
+        'cars/findOneForId/(.*)',
+        { path: 'cars', method: RequestMethod.GET },
+        'cars/uploads/(.*)',
+      )
+      .forRoutes(CarsController);
+  }
+}
 
-//DESPUES TENGO QUE COMENTAR ESTO Y DESCOMENTAR LO QUE ESTA COMENTADO ARRAIBA PARA PROBARLO
-export class AppModule {}
+// //DESPUES TENGO QUE COMENTAR ESTO Y DESCOMENTAR LO QUE ESTA COMENTADO ARRAIBA PARA PROBARLO
+// export class AppModule {}
