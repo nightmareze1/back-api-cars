@@ -229,10 +229,10 @@ http://localhost:4000/cars/updateOneForId/id PUT:Esta ruta actualiza un auto por
 
 ## CREATE CAR
 
-http://localhost:4000/cars/createCar POST: Esta ruta crea uno o varios autos segun el usuario lo prefiera debe tener las imagenes previamente guardadas en la carpeta uploads, o usar el metodo para guardar las mismas
+http://localhost:4000/cars/createCar POST: Esta ruta crea uno o varios autos, según el usuario lo prefiera debe tener las imágenes previamente guardadas en la carpeta uploads, o usar el método para guardar las mismas
 
 ```javascript
-//Ejemplo
+//Ejemplo body
 [
   {
     name: 'ferrari',
