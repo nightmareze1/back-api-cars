@@ -70,12 +70,8 @@ Como ya se dijo anteriormente, la base de datos es Mongo DB. La misma consta de 
 
 ## TOKEN
 
-Todas las rutas a excepcion de las de del tipo get o create user y login llevan el token en las cabeceras, para que estas puedan funcionar de manera correcta.
-
-HEADERS
-
-KEY VALUE
-token Su token
+Todas las rutas a excepción de las de del tipo get o create user y login llevan el token en las cabeceras, para que estas puedan funcionar de manera correcta. Si lo hace desde postman tiene que ingresar los datos de la siguiente forma, donde la key es token y el valor tiene que ser su token
+KEY:token VALUE: su token
 
 ## Cars
 
