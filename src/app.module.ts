@@ -35,6 +35,8 @@ export class AppModule implements NestModule {
         'cars/findOneForId/(.*)',
         { path: 'cars', method: RequestMethod.GET },
         'cars/uploads/(.*)',
+        { path: 'cars', method: RequestMethod.POST },
+        'cars/files',
       )
       .forRoutes(CarsController);
   }
