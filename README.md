@@ -272,6 +272,8 @@ http://localhost:4000/cars/files POST:Esta ruta sirve para subir muchas fotos en
 
 ## Users
 
+Las funciones de borrado de usuarios y edición se les puede dar uso solamente desde el back-end, como así también la búsqueda de usuarios, a las claves de los usuarios se les aplicó un hash, para mayor seguridad .
+
 ## FIND ALL USERS
 
 http://localhost:4000/users/findAll?limit=0&offset=0 GET: Esta ruta busca todos los usuarios en la base de datos, tambien puede traer un solo usuario o saltar usuarios.
