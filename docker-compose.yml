@@ -9,7 +9,8 @@ services:
       - '4000:3000'
     links:
       - mongo
-   
+    volumes:
+      - ./uploads:/usr/src/app/uploads
   mongo:
     container_name: mymongodatabase
     image: mongo
